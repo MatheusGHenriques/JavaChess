@@ -105,10 +105,10 @@ public class ChessApp extends JFrame{
 
         lightMode = !lightMode;
         if(lightMode){
-            menuPanel.colorModeButton.setText("Dark Mode");
+            menuPanel.colorModeButton.setText("Light Mode");
             menuPanel.imageCard.show(menuPanel.imagePanel, "black");
         }else{
-            menuPanel.colorModeButton.setText("Light Mode");
+            menuPanel.colorModeButton.setText("Dark Mode");
             menuPanel.imageCard.show(menuPanel.imagePanel, "white");
 
         }

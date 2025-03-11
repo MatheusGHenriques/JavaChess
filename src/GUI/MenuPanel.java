@@ -36,7 +36,7 @@ public class MenuPanel extends JPanel{
     protected GamePanel gamePanel;
 
     /**
-     * Instantiates the MenuPanel and its componentes.
+     * Instantiates the MenuPanel and its components.
      *
      * @param chessApp  Reference of the main App.
      * @param gamePanel Reference of the GamePanel.
@@ -141,13 +141,13 @@ public class MenuPanel extends JPanel{
      * Creates the buttons' action listeners.
      */
     private void buttonsListeners(){
-        newGameButton.addActionListener(e -> {
+        newGameButton.addActionListener(actionEvent -> {
             chessApp.showCard("Game");
             chessApp.setTime((int) ((Double.parseDouble(timeField.getText())) * 60));
             gamePanel.restartGame();
         });
 
-        continueButton.addActionListener(e -> {
+        continueButton.addActionListener(actionEvent -> {
             chessApp.showCard("Game");
             gamePanel.setWhiteTurn(!gamePanel.isWhiteTurn());
             gamePanel.switchTurn();
@@ -156,7 +156,7 @@ public class MenuPanel extends JPanel{
                 gamePanel.startButton.setEnabled(false);
         });
 
-        quitButton.addActionListener(e -> System.exit(0));
+        quitButton.addActionListener(actionEvent -> System.exit(0));
 
         colorModeButton.addActionListener(actionEvent -> chessApp.switchColorMode());
 
@@ -253,7 +253,7 @@ public class MenuPanel extends JPanel{
     }
 
     /**
-     * Switches the visual assists mode.
+     * Switches the visual assists' mode.
      */
     private void toggleAssists(){
         assistsMode = !gamePanel.isVisualAssists();

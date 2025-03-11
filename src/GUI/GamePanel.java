@@ -66,8 +66,8 @@ public class GamePanel extends JPanel{
         sidePanel.setLayout(new BoxLayout(sidePanel, BoxLayout.Y_AXIS));
         sidePanel.setAlignmentX(CENTER_ALIGNMENT);
 
-        whiteTimerLabel = new JLabel("Branco: 00:00");
-        blackTimerLabel = new JLabel("Preto: 00:00");
+        whiteTimerLabel = new JLabel("White: 00:00");
+        blackTimerLabel = new JLabel("Black: 00:00");
         whiteTimerLabel.setAlignmentX(CENTER_ALIGNMENT);
         blackTimerLabel.setAlignmentX(CENTER_ALIGNMENT);
 
@@ -76,9 +76,9 @@ public class GamePanel extends JPanel{
         victoryLabel = new JLabel("");
         victoryLabel.setAlignmentX(CENTER_ALIGNMENT);
 
-        startButton = new JButton("Comecar");
-        restartButton = new JButton("Reiniciar");
-        quitButton = new JButton("Sair para o Menu");
+        startButton = new JButton("Start");
+        restartButton = new JButton("Restart");
+        quitButton = new JButton("Exit to Menu");
         startButton.setAlignmentX(CENTER_ALIGNMENT);
         restartButton.setAlignmentX(CENTER_ALIGNMENT);
         quitButton.setAlignmentX(CENTER_ALIGNMENT);
@@ -109,9 +109,9 @@ public class GamePanel extends JPanel{
      * Creates the buttons' action listeners.
      */
     private void buttonsListeners(){
-        restartButton.addActionListener(e -> restartGame());
-        startButton.addActionListener(e -> resumeGame());
-        quitButton.addActionListener(e -> {
+        restartButton.addActionListener(actionEvent -> restartGame());
+        startButton.addActionListener(actionEvent -> resumeGame());
+        quitButton.addActionListener(actionEvent -> {
             chessApp.showCard("Menu");
             pauseGame();
             MatchSaveAndPreferences.saveGame(chessBoard, GamePanel.this);
@@ -123,7 +123,7 @@ public class GamePanel extends JPanel{
      * Initialize the players' timers.
      */
     private void initializeTimers(){
-        whiteTimer = new Timer(1000, e -> {
+        whiteTimer = new Timer(1000, actionEvent -> {
             if(whiteTimeRemaining > 0){
                 whiteTimeRemaining--;
                 updateTimerLabels();
@@ -133,7 +133,7 @@ public class GamePanel extends JPanel{
             }
         });
 
-        blackTimer = new Timer(1000, e -> {
+        blackTimer = new Timer(1000, actionEvent -> {
             if(blackTimeRemaining > 0){
                 blackTimeRemaining--;
                 updateTimerLabels();
@@ -330,10 +330,10 @@ public class GamePanel extends JPanel{
         blackTimer.stop();
         if(isWhiteTurn){
             imageLayout.show(imagePanel, "black");
-            victoryLabel.setText("Vitoria do Preto!");
+            victoryLabel.setText("Black's Victory!");
         }else{
             imageLayout.show(imagePanel, "white");
-            victoryLabel.setText("Vitoria do Branco!");
+            victoryLabel.setText("White's Victory!");
         }
     }
 
@@ -478,7 +478,7 @@ public class GamePanel extends JPanel{
      * @return String that shows which piece the user chose.
      */
     public String showImageSelectionOverlay(){
-        JDialog dialog = new JDialog((Frame) SwingUtilities.getWindowAncestor(this), "Promovido! Selecione a nova peca.", true);
+        JDialog dialog = new JDialog((Frame) SwingUtilities.getWindowAncestor(this), "Promoted! Select the new piece:", true);
         dialog.setLayout(new GridLayout(2, 2));
         dialog.setSize(400, 200);
 
@@ -531,7 +531,7 @@ public class GamePanel extends JPanel{
 
         button.setBackground(restartButton.getBackground());
 
-        button.addActionListener(e -> {
+        button.addActionListener(actionEvent -> {
             selectedPiece[0] = pieceCode;
             dialog.dispose();
         });

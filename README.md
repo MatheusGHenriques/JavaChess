@@ -1,6 +1,13 @@
 # JavaChess
 Simple Chess implemented in Java, with a GUI made using Swing and AWT.
 
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 10px;">
+  <img src="light_menu.jpg" style="width: 100%;" />
+  <img src="dark_menu.jpg" style="width: 100%;" />
+  <img src="light_assists_game.jpg" style="width: 100%;" />
+  <img src="dark_assists_contrast_game.jpg" style="width: 100%;" />
+</div>
+
 ## Features
 - **Graphical User Interface (GUI)**: Built using Java Swing and AWT.
 - **Interactive Chessboard**: Click to move pieces, with visual feedback.

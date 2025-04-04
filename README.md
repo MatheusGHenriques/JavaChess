@@ -40,4 +40,4 @@ Simple Chess implemented in Java, with a GUI made using Swing and AWT.
 - **Any feedback or suggestions are welcomed, and I intend to add some other functionalities over time.**
 
 ## License
-This project is licensed under MIT's license. See the file .[LICENSE](LICENSE) for more details.
+This project is licensed under GPLv3 license. See the file .[LICENSE](LICENSE) for more details.

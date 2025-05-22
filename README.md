@@ -3,12 +3,12 @@ Simple Chess implemented in Java, with a GUI made using Swing and AWT.
 
 <table>
     <tr>
-        <td><img src="light_menu.jpg" width="300"/></td>
-        <td><img src="dark_menu.jpg" width="300"/></td>
+        <td><img src="light_menu.jpg" width="300" style="display:none;"/></td>
+        <td><img src="dark_menu.jpg" width="300" style="display:none;"/></td>
     </tr>
     <tr>
-        <td><img src="light_assists_game.jpg" width="300"/></td>
-        <td><img src="dark_assists_contrast_game.jpg" width="300"/></td>
+        <td><img src="light_assists_game.jpg" width="300" style="display:none;"/></td>
+        <td><img src="dark_assists_contrast_game.jpg" width="300" style="display:none;"/></td>
     </tr>
 </table>
 

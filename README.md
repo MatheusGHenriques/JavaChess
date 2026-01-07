@@ -29,7 +29,7 @@ Simple Chess implemented in Java, with a GUI made using Swing and AWT.
 
 ## Installation & Running
 ### Prerequisites
-- **Java Development Kit (JDK 17+)**  
+- **Java Development Kit (JDK 23+)**  
   Ensure you have Java installed. You can check your version with:
   ```sh
   java -version

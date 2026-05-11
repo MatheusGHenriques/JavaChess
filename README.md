@@ -1,43 +1,54 @@
 # JavaChess
-Simple Chess implemented in Java, with a GUI made using Swing and AWT.
 
-<table>
-    <tr>
-        <td><img src="light_menu.jpg" width="300" style="display:none;"/></td>
-        <td><img src="dark_menu.jpg" width="300" style="display:none;"/></td>
-    </tr>
-    <tr>
-        <td><img src="light_assists_game.jpg" width="300" style="display:none;"/></td>
-        <td><img src="dark_assists_contrast_game.jpg" width="300" style="display:none;"/></td>
-    </tr>
-</table>
+> Desktop chess application built in Java with focus on object-oriented design and game state validation.
+
+Chess implementation featuring move validation, check/checkmate detection, customizable timers and persistent user preferences - developed with Java Swing/AWT and documented with JavaDoc.
+
+## Screenshots
+
+| Light Mode | Dark Mode |
+|---|---|
+| ![light menu](light_menu.jpg) | ![dark menu](dark_menu.jpg) |
+| ![light game](light_assists_game.jpg) | ![dark game](dark_assists_contrast_game.jpg) |
 
 ## Features
-- **Graphical User Interface (GUI)**: Built using Java Swing and AWT.
-- **Interactive Chessboard**: Click to move pieces, with visual feedback.
-- **Move Validation**: Ensures only legal moves are played.
-- **Turn-Based System**: Alternates turns between White and Black.
-- **Custom Timers**: Allows users to change player's timers as they see fit.
-- **Pawn Promotion**: Allows pawn promotion with a selection overlay.
-- **Check & Checkmate Detection**: Identifies check and game-ending conditions.
-- **Resizable App**: Elements scale dynamically with the window.
-- **Visual Assists**: Allows the user to view possible moves and the last move on the Chessboard if they would like to.
-- **Color Contrast**: Allows the user to choose to view the default or a high contrast version of the Chessboard.
-- **Dark Mode**: Switch between Light and Dark Mode across all app.
-- **File Persistency**: User preferences and the last game are always saved locally.
-- **JavaDoc**: The source files are all commented using JavaDoc, and its docummentation can be generated automatically.
 
-## Installation & Running
-### Prerequisites
-- **Java Development Kit (JDK 23+)**  
-  Ensure you have Java installed. You can check your version with:
-  ```sh
-  java -version
-- **Execute the JAR**  
-  Execute the .jar file in the "Executable Jar File" folder, or download the source code and compile it.
+### Game Logic
+- Move validation - only legal moves are accepted
+- Check and checkmate detection
+- Pawn promotion with piece selection overlay
+- Customizable per-player timers
 
-## Thanks
-- **Any feedback or suggestions are welcomed, and I intend to add some other functionalities over time.**
+### Interface
+- Interactive chessboard - click to select and move pieces with visual feedback
+- Visual assists - highlight possible moves and last move played
+- High contrast chessboard option
+- Light and dark mode across the entire app
+- Responsive desktop window - board and interface scale dynamically
+
+### Engineering
+- Object-oriented architecture with encapsulated game rules and state
+- Local persistence - user preferences and last game state saved automatically
+- Source code documented with JavaDoc
+
+## Getting Started
+
+#### Prerequisites
+
+Java Development Kit (JDK 23+). Check your version with:
+
+```sh
+java -version
+```
+
+#### Run
+
+Execute the prebuilt `.jar` file available in the repository:
+
+```sh
+java -jar JavaChess.jar
+```
 
 ## License
-This project is licensed under GPLv3 license. See the file .[LICENSE](LICENSE) for more details.
+
+Licensed under GPL v3.0 - see [`LICENSE`](./LICENSE) for details.
